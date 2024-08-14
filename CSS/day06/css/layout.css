@@ -1,0 +1,126 @@
+*{ box-sizing: border-box; margin: 0; padding: 0; }
+ul,ol,li{ list-style: none; }
+#wrap{
+    width: 1000px; margin: 20px auto;
+}
+header{
+    display: flex;
+    height: 120px;
+}
+#logo-area{
+    width: 150px;
+}
+#logo-area img{
+    width: 120px;
+}
+#gnb-area{
+    width: 700px;
+}
+nav{
+    width: 500px;
+    height: 120px;
+    margin:0 auto;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+nav ul li{
+    width: 100px;
+    line-height: 120px;
+}
+#btn-area{
+    width: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#btn-area [type=button]{
+    width: 100px;
+    padding: 10px;
+}
+section{
+    width: 650px;
+    float: left;
+    border:1px solid #ccc;
+    height: 600px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#top{
+    border-bottom: 1px solid #ccc;
+    height: 290px;
+    padding:10px;
+}
+#top p{
+    margin-bottom: 10px;
+    border:1px solid green;
+    padding:10px;
+}
+#bottom{
+    height: 290px;
+    padding:10px;
+}
+#bbs-area{
+    float: left;
+    width: 300px;
+    border:1px solid black;
+    padding: 10px;
+}
+#bbs-area table{
+    width: 278px; height: 248px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#rank-area{
+    float: right;
+    width: 300px; height: 270px;
+}
+#rank-area #celeb{
+    height: 135px;
+    border:1px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#rank-area #profile{
+    height: 135px;
+    border:1px solid black;
+    border-top:none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#profile ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 135px;
+}
+#profile li{
+    border:1px solid black;
+    width: 60px; height: 80px;
+}
+
+aside{
+    width: 330px;
+    float: right;
+    border:1px solid #ccc;
+    height: 600px;
+    border-radius: 10px;
+    padding:10px;
+}
+aside div{
+    border:1px solid black;
+}
+#ad1{
+    height: 390px;
+}
+#ad2{
+    height: 190px;
+}
+footer{
+    background-color: rgba(0,0,0,0.4);
+    height: 130px;
+    clear: both;
+}
