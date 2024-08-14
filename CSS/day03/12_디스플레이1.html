@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디스플레이 - 1</title>
+<style>
+    img{ width: 150px; }
+    div{
+        border:1px solid red;
+        margin: 20px; padding: 10px;
+    }
+    #block img{ display: block; }
+    .box{
+        box-sizing: border-box;
+        border:none;
+        width: 100px; height: 100px;
+        margin: 0; padding: 0;
+        border:3px solid blue;
+    }
+    div.ib{
+        display: inline-block;
+    }
+    span.ib{
+        display: inline-block;
+    }
+</style>
+</head>
+<body>
+    <h2>디스플레이 - 1</h2>
+    <div id="inline">
+        <img src="./images/강아지.jpg" alt="">
+        <img src="./images/고양이.jpg" alt="">
+        <img src="./images/햄스터.jpg" alt="">
+    </div>
+    <div id="block">
+        <img src="./images/강아지.jpg" alt="">
+        <img src="./images/고양이.jpg" alt="">
+        <img src="./images/햄스터.jpg" alt="">
+    </div>
+    <hr>
+    <span class="box ib"></span>
+    <span class="box ib"></span>
+    <span class="box ib"></span>
+    <hr>
+    <div class="box ib"></div>
+    <div class="box ib"></div>
+    <div class="box ib"></div>
+</body>
+</html>

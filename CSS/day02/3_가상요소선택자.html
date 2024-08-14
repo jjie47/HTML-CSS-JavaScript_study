@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 요소 선택자</title>
+<style>
+    .txt1::after{
+        content:"☆";
+        color:yellow;
+        background-color: black;
+        font-size: 24px;
+    }
+    .txt2::before{
+        content:"♥";
+        color:red;
+        background-color: darkgreen;
+        font-size: 24px;
+    }
+</style>
+</head>
+<body>
+    <h2>가상 요소 선택자</h2>
+    <p class="txt1">after</p>
+    <p class="txt2">before</p>
+</body>
+</html>

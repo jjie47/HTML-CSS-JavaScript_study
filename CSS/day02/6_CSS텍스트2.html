@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 텍스트 - 2</title>
+<style>
+    p{
+        border:3px solid black;
+        padding:10px;
+        margin:20px;
+    }
+    [class|=align]{
+        color:darkgreen;
+    }
+    [class^=indent]{
+        color:blue;
+    }
+    [class$=line]{
+        color:maroon;
+    }
+    .align-left{ text-align: left; }
+    .align-right{ text-align: right; }
+    .align-center{ text-align: center; }
+    .align-justify{ text-align: justify; }
+
+    .indent1{
+        text-indent: 5%;
+    }
+    .indent2{
+        /* text-indent: -5px; */
+        text-indent: -9999px;
+    }
+    .small-line{ line-height: 0.7; }
+    .big-line{ line-height: 2; }
+    .px-line{ line-height: 20px; }
+    .per-line{ line-height: 67%; }
+</style>
+</head>
+<body>
+    <h2>CSS 텍스트 - 2</h2>
+    <p class="align-left">
+        Su su su Supernova<br>
+        Nova Can’t stop hyperstellar 원초 그걸 찾아 Bring the light of a dying star 불러낸 내 우주를 봐 봐 Supernova
+    </p>
+    <p class="align-right">
+        Su su su Supernova<br>
+        Nova Can’t stop hyperstellar 원초 그걸 찾아 Bring the light of a dying star 불러낸 내 우주를 봐 봐 Supernova
+    </p>
+    <p class="align-center">
+        Su su su Supernova<br>
+        Nova Can’t stop hyperstellar 원초 그걸 찾아 Bring the light of a dying star 불러낸 내 우주를 봐 봐 Supernova
+    </p>
+    <p class="align-justify">
+        Su su su Supernova<br>
+        Nova Can’t stop hyperstellar 원초 그걸 찾아 Bring the light of a dying star 불러낸 내 우주를 봐 봐 Supernova
+    </p>
+
+    <p class="indent1">
+        Su su su Supernova<br>
+        Nova Can’t stop hyperstellar 원초 그걸 찾아 Bring the light of a dying star 불러낸 내 우주를 봐 봐 Supernova
+    </p>
+    <p class="indent2">
+        Su su su Supernova<br>
+        Nova Can’t stop hyperstellar 원초 그걸 찾아 Bring the light of a dying star 불러낸 내 우주를 봐 봐 Supernova
+    </p>
+
+    <p class="small-line">
+        Su su su Supernova<br>
+        Nova Can’t stop hyperstellar 원초 그걸 찾아 Bring the light of a dying star 불러낸 내 우주를 봐 봐 Supernova
+    </p>
+    <p class="big-line">
+        Su su su Supernova<br>
+        Nova Can’t stop hyperstellar 원초 그걸 찾아 Bring the light of a dying star 불러낸 내 우주를 봐 봐 Supernova
+    </p>
+    <p class="px-line">
+        Su su su Supernova<br>
+        Nova Can’t stop hyperstellar 원초 그걸 찾아 Bring the light of a dying star 불러낸 내 우주를 봐 봐 Supernova
+    </p>
+    <p class="per-line">
+        Su su su Supernova<br>
+        Nova Can’t stop hyperstellar 원초 그걸 찾아 Bring the light of a dying star 불러낸 내 우주를 봐 봐 Supernova
+    </p>
+</body>
+</html>

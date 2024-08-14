@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 텍스트 - 7</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+<style>
+    @font-face {
+        font-family: 'ChosunGu';
+        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    h2{
+        font-family: "Dongle", sans-serif;
+    }
+    p{
+        /* font-size: 20px; */
+        /* 32px */
+        font-size: 200%;
+        font-family: 'ChosunGu';
+    }
+    .em{
+        /* 48px - 부모의 글자크기가 32px이기 때문에 */
+        font-size: 1.5em;
+    }
+    .rem{
+        /* 24px - html 요소의 글자크기가 16px이기 때문에 */
+        font-size: 1.5rem;
+    }
+
+    .normal{ font-weight: noraml; font-weight: 400;}
+    .bold{ font-weight: bold; font-weight: 700; }
+    .extrabold{ font-weight: bolder; font-weight: 900; }
+</style>
+</head>
+<body>
+    <h2>CSS 텍스트 - 7</h2>
+    <p class="normal">
+        <span class="em">Su su su Supernova</span><br>
+        Nova Can’t stop hyperstellar 원초 그걸 찾아 Bring the light of a dying star 불러낸 내 우주를 봐 봐 Supernova
+    </p>
+    <p class="bold">
+        <span class="rem">Su su su Supernova</span><br>
+        Nova Can’t stop hyperstellar 원초 그걸 찾아 Bring the light of a dying star 불러낸 내 우주를 봐 봐 Supernova
+    </p>
+    <p class="extrabold">
+        Su su su Supernova<br>
+        Nova Can’t stop hyperstellar 원초 그걸 찾아 Bring the light of a dying star 불러낸 내 우주를 봐 봐 Supernova
+    </p>
+</body>
+</html>
