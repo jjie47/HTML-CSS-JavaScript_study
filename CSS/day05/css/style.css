@@ -1,0 +1,33 @@
+*{padding: 0; margin: 0; box-sizing: border-box; list-style: none; text-decoration: none;}
+
+#wrap{width: 1200px; margin: 20px auto 0;}
+.clear::after{display: block; clear: both; content: "";}
+
+header{display: flex; background-color: #f7f7f7; padding:10px 20px; border-radius: 10px; margin-bottom:20px; }
+header #logo{width:120px; height:60px; border-radius: 5px; background: url(../images/강아지.jpg) center 0px / cover no-repeat;}
+header #gnb{flex-shrink: 1; width:1200px; }
+header #gnb ul{display: flex; height:60px; justify-content: center; align-items: center;}
+header #gnb ul li a{display: block; width:100px; margin:0 10px; border-radius: 5px; box-shadow: 3px 2px 3px #eee; background-color: #fff; color:#222; line-height:40px; text-align: center;}
+header #gnb ul li a:hover{background-color: #7ea1b9; color:#fff;}
+header #btn{width: 150px;}
+header #btn p{border-radius: 5px; box-shadow: 3px 2px 3px #eee; background-color: #fff; line-height:25px; text-align: center; }
+header #btn p:first-child{margin-bottom:10px;}
+
+#contents section{float:left; width:800px; margin-right:20px;  padding:20px; border:1px solid #ddd; border-radius: 10px;}
+#contents section #main_top div{height:100px; margin-bottom:20px; border-radius: 5px; background-color: #fdd; }
+#contents section #main_bottom #table{float:left; overflow: hidden; width: 430px; margin-right:20px; border:1px solid #eee; border-radius: 5px; }
+#contents section #main_bottom #table table{width:100%; border-collapse: collapse; line-height: 40px; }
+#contents section #main_bottom #table table tr{border-bottom:1px solid #eee;}
+#contents section #main_bottom #table table tr:last-child{border-bottom:0;}
+#contents section #main_bottom #table table th{background-color: #f7f7f7;}
+
+#contents section #main_bottom #img{float:left; width: 308px;}
+#contents section #main_bottom #img .one{height:130px; margin-bottom:10px; border-radius: 5px; background-color: #f7f7f7; }
+#contents section #main_bottom #img .two{padding-top:10px; border-top:1px solid #eee;}
+#contents section #main_bottom #img .two p{float:left; width:144px; height:96px; border-radius: 5px; background-color: #cfdee9; }
+#contents section #main_bottom #img .two p:first-child{margin-right:20px;}
+
+#contents aside{float:left; width:380px; height: 529px; padding:20px; border:1px solid #ddd; border-radius: 10px;}
+#contents aside div{height:235px; margin-bottom:20px; border-radius: 5px; background-color: #cfdee9; }
+
+footer{margin-top:20px; border-radius: 10px; background-color: #818181; color:#fff; line-height:50px; text-align: center; }
