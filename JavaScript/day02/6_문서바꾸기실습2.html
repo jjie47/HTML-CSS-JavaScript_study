@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습 - 2</title>
+    <style>
+        .choice{background-color: #ff8a76;}
+    </style>
+</head>
+<body>
+    <h2>실습 - 2</h2>
+
+    <p>요금표</p>
+    <table border="1">
+        <tr>
+            <th>구분</th>
+            <th>요금</th>
+        </tr>
+        <tr id="a">
+            <td id="a1">아동</td>
+            <td>무료</td>
+        </tr>
+        <tr id="b">
+            <td id="b1">청소년</td>
+            <td>2000원</td>
+        </tr>
+        <tr id="c">
+            <td id="c1">성인</td>
+            <td>5000원</td>
+        </tr>
+    </table>
+</body>
+
+<script>
+    let data = prompt("아동, 청소년, 성인 중 한가지를 입력하세요.");
+
+    if(data == "아동"){
+        let tag = document.getElementById("a");
+        tag.classList.add("choice");
+        let tag1 = document.getElementById("a1");
+        tag1.innerHTML = "★아동";
+    } else if(data == "청소년"){
+        let tag = document.getElementById("b");
+        tag.classList.add("choice");
+        let tag1 = document.getElementById("b1");
+        tag1.innerHTML = "★청소년";
+    } else if(data == "성인"){
+        let tag = document.getElementById("c");
+        tag.classList.add("choice");
+        let tag1 = document.getElementById("c1");
+        tag1.innerHTML = "★성인";
+    }
+
+</script>
+</html>

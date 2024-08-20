@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 실습 - 1</title>
+</head>
+<body>
+    <h2>함수 실습 - 1</h2>
+    <input type="button" value="주사위 게임하기" onclick="game1()">
+    <input type="button" value="가위바위보 게임하기" onclick="game2()">
+    <p id="result"></p>
+</body>
+<script>
+    // 1. 주사위 게임
+    // 랜덤한 주사위 숫자를 하나 정해놓고
+    // 프롬프트로 그 숫자를 맞추면 성공
+    // ------프롬프트창--------
+    // 숫자를 입력하세요
+    // -----------------------
+
+    // --------알럿창----------
+    // 3이 아닙니다.
+    // -----------------------
+    
+    // -----------------------
+    // 정답입니다! 게임을 종료합니다!
+    // -----------------------    
+    
+    function game1(){
+        let com_num = Math.floor(Math.random()*6+1);
+        while(true){
+            let num = prompt("숫자를 입력하세요");
+            if(com_num == num){
+                alert("정답입니다! 게임을 종료합니다!");
+                break; 
+            } else{
+                alert(num+"이(가) 아닙니다.");
+            }
+        }
+    }
+
+
+    // 2. 가위바위보 게임
+    // 매번 컴퓨터는 가위, 바위, 보 중 하나를 선택
+    // 프롬프트로 입력을 해서 이기면 성공
+
+    // ------------------------
+    // 가위, 바위, 보 중 하나를 선택하세요
+    // ------------------------
+
+    // ------------------------------
+    // 컴퓨터 : 보 / 나 : 바위
+    // 졌습니다!
+    // ------------------------------
+    // ------------------------------
+    // 컴퓨터 : 보 / 나 : 보
+    // 비겼습니다!
+    // ------------------------------
+    // ------------------------------
+    // 컴퓨터 : 보 / 나 : 가위
+    // 이겼습니다! 게임을 종료합니다!
+    // ------------------------------
+
+    function game2(){
+        const rock = ["가위","바위","보"];
+        // let com_choice = rock[Math.floor(Math.random()*3)];
+        // let com_choice = rock[num];
+
+        let com_num = Math.floor(Math.random()*3);
+
+        while(true){
+
+            let key = prompt("가위, 바위, 보 중 하나를 선택하세요.");
+            let hash = {"가위":0, "바위":1, "보":2};
+            let choice_num = hash[key];
+
+            alert("com_num : "+rock[com_num] + " / choice_num : "+rock[choice_num]);
+
+
+            //가위랑 보가 나왔을 가위가 높으니까 순서 올리기
+            if(com_num==0 && choice_num==2){
+                com_num = 3;
+            }else if(com_num==2 && choice_num==0){
+                choice_num = 3;
+            }
+
+            let txt = document.getElementById("result");
+            if(com_num == choice_num){
+                txt.innerHTML = txt.innerHTML+"<br>비겼습니다!";
+            }else if(com_num > choice_num){
+                txt.innerHTML = txt.innerHTML+"<br>졌습니다.";
+            }else if(com_num < choice_num){
+                txt.innerHTML = txt.innerHTML+"<br>이겼습니다! 게임을 종료합니다.";
+                break;
+            }
+
+            
+
+        }
+    }
+
+</script>
+</html>

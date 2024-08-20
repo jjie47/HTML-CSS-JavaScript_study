@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 - 1</title>
+</head>
+<body>
+    <h2>함수 - 1</h2>
+    <p id="txt">이곳에 문자열이 추가됩니다!</p>
+    <input type="button" value="함수실행" onclick="appendTxt()">
+</body>
+
+<script>
+    // console.log("바로")
+    // count();
+
+    function appendTxt(){
+        // 1. p#txt 태그를 찾아서
+        const txt = document.getElementById("txt");
+        // 2. 여는 태그와 닫는 태그 사이에다가
+            // txt.innerHTML
+        // 3. "여는 태그와 닫는 태그 사이 값"에 추가 문자열 연결해서 넣기
+        txt.innerHTML = txt.innerHTML+"<br>추가된 문자열"
+    }
+    
+    function count(){
+        for(let i=0; i<10; i++){
+            console.log(`i : ${i}`);
+        }
+    }
+
+    //show(20);
+    (function shw(data){
+        alert("show()함수가 호출되었습니다! "+data)
+    })(20);
+</script>
+</html>

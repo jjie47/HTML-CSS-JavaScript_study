@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적관리 프로그램</title>
+</head>
+<body>
+    <h2>성적관리 프로그램</h2>
+</body>
+    <script>
+        //대화상자로 이름, 국어점수, 영어점수, 수학점수 입력받고
+        //총점과 평균점수(소수점 2자리까지)를 페이지에 출력하기
+
+        let name = window.prompt("이름을 입력하세요.");
+        let kor = Number(window.prompt("국어 점수를 입력하세요."));
+        let eng = Number(window.prompt("영어 점수를 입력하세요."));
+        let math = Number(window.prompt("수학 점수를 입력하세요."));
+
+        let tot = kor + eng + math;
+        let avg = (tot / 3).toFixed(2);
+
+        document.write(`<h1>학생 정보</h1>`);
+        document.write(`<p>이름: ${name}</p>`);
+        document.write(`<p>총점: ${tot}</p>`);
+        document.write(`<p>평균 점수: ${avg}</p>`);
+    </script>
+</html>

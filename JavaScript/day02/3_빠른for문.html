@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빠른 for문</title>
+</head>
+<body>
+    <h2>빠른 for문</h2>
+</body>
+<script>
+    const arr = [10,20,30,40,50];
+    for(let i in arr){
+        console.log(arr[i]);
+    }
+
+    const mycar = {model:"Ferrari", color:"Red"};
+    for(let key in mycar){
+        console.log(mycar[key]); //mycar["model"], mycar["color"]
+    }
+
+    console.log("================")
+    for(let data of arr){
+        console.log(data);
+    }
+    
+    //mycar는 단순 객체이고 반복자 형태가 아니기 때문에
+    //for of 문을 사용할 수 없다.
+    for(let value of mycar){
+
+    }
+
+</script>
+</html>
