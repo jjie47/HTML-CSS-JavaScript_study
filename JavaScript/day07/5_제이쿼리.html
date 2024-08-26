@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리</title>
+    <!-- 이 방식이 안정성이 좋음 -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+
+    <!-- CDN 방식 -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+</head>
+<body>
+    <h2>제이쿼리</h2>
+    <p class="redText">여기는 전부 빨간색 글씨로</p>
+    <p class="redText">여기도 또한 빨간색 글씨로</p>
+    <input type="button" value="초기화" onclick="reset()">
+    <hr>
+    <p id="text">
+        <span>오픈소스</span>
+        기반의 자바 스크립트 라이브러리
+    </p>
+    <p></p>
+</body>
+<script>
+    
+    // window.onload = function(){
+        //     console.log("제이쿼리 시작!");
+        // }
+    $(function(){
+        console.log("제이쿼리 시작!");
+    })
+        
+    // const redText = document.getElementsByClassName("redText");
+    // for(const tag of redText){
+    //     tag.addEventListener("click",()=>{
+    //         tag.style.color = "red";
+    //     })
+    // }
+    //$(선택자).on("이벤트명",이벤트리스너) : 선택된 대상들에게 이벤트리스너 등록
+    // $(".redText").on("click",function(e){
+    //     e.target.style.color = "red";
+    // })
+    //클릭만 이런식으로 줄여서 쓸 수 있음
+    $(".redText").click(function(e){
+        e.target.style.color = "red";
+    })
+
+    function reset(){
+        $(".redText").css("color","black");
+    }
+
+    // jQuery로 찾은 요소는 jQuery 객체로 찾아지기 때문에
+    // 바닐라 자바스크립트의 메소드나 프로퍼티는 사용할 수 없음
+    // $("#text > span").setAttribute("class","open");
+    $("#text > span").attr("class","open");
+
+    // 제이쿼리로 클래스 추가, 삭제
+    $("#text > span").addClass("source");
+    $("#text > span").removeClass("open");
+
+    // 클래스를 가지고 있는지 여부 확인
+    console.log($("#text > span").hasClass("open"));
+
+    // document.getElementById("text").nextElementSibling.innerHTML = "변경된 문자열";
+    // $(선택자).next() : 다음 형제 노드(요소)
+    // $(선택자).text(값) : 선택된 대상들의 contents 변경
+    $("#text").next().text("변경된 문자열!");
+
+    // .css() .attr() .text() 기존 값 가져오기
+    console.log($(".redText").css("color"));
+    console.log($("#text > span").attr("class"));
+    console.log($("#text").next().text());
+</script>
+</html>

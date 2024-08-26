@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체모델 - 2</title>
+    <script>
+        // window.onload : HTML 해석이 끝난 후 호출해 줄 함수 설정
+        window.onload = function(){
+            const gnb = document.getElementById("gnb");
+            // console.log(gnb);
+
+            // gnb의 부모
+            console.log(gnb.parentNode);
+            // gnb의 자식 : 비요소 노드들도 포함(띄어쓰기도 text라는 자식으로 인식)
+            console.log(gnb.childNode);
+            // gnb의 자식 : 요소 노드들만 담겨있음
+            console.log(gnb.children);
+
+            gnb.children[0].style.listStyle = 'none';
+            gnb.children[0].style.color = 'blue';
+
+            const ul = gnb.children[0];
+
+            console.log(ul.children[1]); // <li>내용 2</li>
+
+            console.log(ul.children[1].nextSibling); // 비요소 노드들도 포함
+            console.log(ul.children[1].nextElementSibling);
+
+            console.log(ul.children[1].previousSibling); // 비요소 노드들도 포함
+            console.log(ul.children[1].previousElementSibling);
+
+            console.log(ul.firstChild); // 비요소 노드들도 포함
+            console.log(ul.firstElementChild);
+
+            console.log(ul.lastChild); // 비요소 노드들도 포함
+            console.log(ul.lastElementChild);
+
+        }
+    </script>
+</head>
+<body>
+    <h2>문서객체모델 - 2</h2>
+    <div>
+        <nav id="gnb">
+            <!-- 이 주석의 양쪽에는 text 노드가 숨어있음 -->
+            <ul>
+                <li class="first">내용 1</li>
+                <li>내용 2</li>
+                <li>내용 3</li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요리법</title>
+</head>
+<body>
+    <h2>요리법</h2>
+    <p>
+        요리명 <input type="text">
+    </p>
+    <div id="contents">
+        <textarea name="step" id="" class="step"></textarea>
+        <input type="button" value="단계추가" onclick="f()">
+    </div>
+    <p>
+        <input type="button" value="등록">
+    </p>
+</body>
+<script>
+    function f(){
+        const contents = document.getElementById("contents");
+        contents.innerHTML += '<hr>';
+        contents.innerHTML += '<textarea name="step" id="" class="step"></textarea> ';
+        contents.innerHTML += '<input type="button" value="단계추가" onclick="f()">';
+    }
+</script>
+</html>

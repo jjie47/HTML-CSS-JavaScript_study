@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체모델실습</title>
+</head>
+<body>
+    <h2>요리법</h2>
+    <p>
+        요리명 <input type="text">
+    </p>
+    <div id="contents">
+        <textarea name="step" id=""></textarea>
+        <input type="button" value="단계추가" onclick="f()">
+    </div>
+    <p>
+        <input type="button" value="등록">
+    </p>
+</body>
+<script>
+    function f(){
+        const contents = document.getElementById("contents");
+        const btn = contents.lastElementChild;
+
+        const hr = document.createElement("hr");
+        contents.appendChild(hr);
+
+        const textarea = document.createElement("textarea");
+        textarea.setAttribute("name","step");
+        contents.appendChild(textarea);
+
+        contents.appendChild(btn.cloneNode(true));
+    }
+</script>
+</html>

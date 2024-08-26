@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 객체</title>
+</head>
+<body>
+    <h2>폼 객체</h2>
+    <!-- onsubmit : form이 제출될 때 수행, return false(제출안함) / return true(제출함) -->
+    <!-- <form name="searchForm" action="/board/search" method="get" onsubmit="return sendit1()"> -->
+    <form name="searchForm" action="/board/search" method="get">
+        <p id="txt"></p>
+        <input type="search" name="search" id="search" placeholder="검색어를 입력하세요">
+        <!-- <input type="button" value="검색" onclick="sendit2()"> -->
+        <input type="button" value="검색" onclick="sendit3()">
+    </form>
+</body>
+<script>
+    const searchForm = document.searchForm;
+    console.log(searchForm);
+    console.log(searchForm.action);
+    searchForm.action = "/user/join";
+    console.log(searchForm.action);
+
+    const search = searchForm.search;
+    console.log(search);
+    
+    // 유효성검사(값이 비었는지 안비었는지)
+    function sendit1(){
+        if(search.value == ''){
+            alert("검색어를 입력하세요!");
+            search.focus(); // search로 이동해서 커서 깜박거리게 해주기
+            return false;
+        }
+        if(search.value.length < 2){
+            alert("검색어는 두 자 이상 입력하세요!");
+            search.value = "";
+            search.focus();
+            return false;
+        }
+        return true;
+    }
+
+    function sendit2(){
+        if(search.value == ''){
+            alert("검색어를 입력하세요!");
+            search.focus();
+            return; // return을 만나는 순간 sendit2 함수가 끝남
+        }
+        if(search.value.length < 2){
+            alert("검색어는 두 자 이상 입력하세요!");
+            search.value = "";
+            search.focus();
+            return;
+        }
+        searchForm.submit();
+    }
+
+    function sendit3(){
+        const txt = document.getElementById("txt");
+        if(search.value == ''){
+            txt.innerHTML = "검색어를 입력하세요!";
+            search.focus();
+            return;
+        }
+        if(search.value.length < 2){
+            txt.innerHTML = "검색어는 두 자 이상 입력하세요!";
+            search.value = "";
+            search.focus();
+            return;
+        }
+        searchForm.submit();
+    }
+</script>
+</html>
